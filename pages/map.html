@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Map</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    
+
 </head>
 
 <body>
-    <header class="bg-[#212121CC] py-[20px] pr-[20px]">
+    <header class="bg-[#272727] py-[20px] pr-[20px]">
         <div class="container mx-auto flex justify-between items-center">
             <ul class="flex gap-[35px] items-center">
                 <li>
@@ -51,25 +53,44 @@
     </header>
 
     <main>
-        <section>
-            <div class="flex justify-center pt-[30px] pb-[30px] bg-[#212121Cc]">
+        <section class="bg-[#212121Cc]">
+            <div class="flex justify-center pt-[30px] pb-[30px] ">
     
                 <h1 class="text-[32px] text-[500] text-[white]">КАРТА</h1>
     
             </div>
             <div class="bg-[#272727] pt-[30px] pb-[70px]">
-                <div class="container mx-auto">
-                    <div class="flex items-center"><input required
-                        class="bg-[transparent] text-[#C4C4C4] text-[16px] text-[400] border-[1px] border-[#4F4F4F] rounded-[20px] max-w-[642px] w-[100%] h-[50px] pl-[30px] border-r-[0px] rounded-r-[0px]"
-                        placeholder="Страна, город, улица..." type="search"><button class="px-[20px] py-[21px] border-r-[1px] border-y-[1px] h-[50px] border-[#4F4F4F] rounded-r-[20px]"><a href=""><img src="../assets/map/Line 17 (Stroke) (1).svg" alt=""></a></button>
-                    <ul class="flex gap-[30px] pl-[40px]">
-                        <li><a href=""><img class="color-[#C4C4C4]" src="../assets/map/x-knives.svg" alt=""></a></li>
-                    <li><a href=""><img src="../assets/map/spoon fork knife .svg" alt=""></a></li>
-                    <li><a href=""><img src="../assets/map/big knife .svg" alt=""></a></li>
-                    <li><a href=""><img src="../assets/map/cutting knife .svg" alt=""></a></li>
-                    <li><a href=""><img src="../assets/map/barbeque .svg" alt=""></ul></a></li>    
+                <div class="container items-center justify-center mx-auto px-[20px]">
+                    <form><div class="flex items-center"><input id="search-input" required
+                        class="flex justify-center bg-[transparent] text-[#C4C4C4] text-[16px] text-[400] border-[1px] border-[#4F4F4F] rounded-[20px] max-w-[642px] w-[100%] h-[50px] pl-[30px] border-r-[0px] rounded-r-[0px]"
+                        placeholder="Страна, город, улица..." type="text"><button id="search-button" class="px-[20px] py-[21px] border-r-[1px] border-y-[1px] h-[50px] border-[#4F4F4F] rounded-r-[20px]"><a href=""><img src="../assets/map/Line 17 (Stroke) (1).svg" alt=""></a></button></form>
+                    <ul class="hidden gap-[15px] pl-[40px] lg:flex">
+                        <li class="mr-[25px]"><a href=""><img class="lg:w-[90px] xl:w-[53px] p-[12px] border-[2px] border-[#4F4F4F] rounded-[50px] hover:border-[#FF0000] transition duration-300" src="../assets/map/x-knives .svg" alt=""></a></li>
+                    <li><a href=""><img class="lg:w-[90px] xl:w-[53px] p-[12px] border-[2px] border-[#4F4F4F] rounded-[100%] hover:border-[#FF0000] transition duration-300" src="../assets/map/spoon fork knife .svg" alt=""></a></li>
+                    <li><a href=""><img class="lg:w-[90px] xl:w-[53px] p-[12px] border-[2px] border-[#4F4F4F] rounded-[100%] hover:border-[#FF0000] transition duration-300" src="../assets/map/big knife .svg" alt=""></a></li>
+                    <li><a href=""><img class="lg:w-[90px] xl:w-[53px] p-[12px] border-[2px] border-[#4F4F4F] rounded-[100%] hover:border-[#FF0000] transition duration-300" src="../assets/map/cutting knife .svg" alt=""></a></li>
+                    <li><a href=""><img class="lg:w-[90px] xl:w-[53px] p-[12px] border-[2px] border-[#4F4F4F] rounded-[100%] hover:border-[#FF0000] transition duration-300" src="../assets/map/barbeque .svg" alt=""></ul></a></li>    
+                    
                 </div>
-                </div>
+                
+                <div class="pt-[40px] grid grid-cols-2 justify-between">
+               <div>
+                <iframe class="max-w-[960px] w-[100%] h-[771px] rounded-[15px]" src="https://yandex.uz/map-widget/v1/?l=sat%2Cskl&ll=69.296809%2C41.313436&z=14"
+                         frameborder="1" allowfullscreen="true" ></iframe></div>
+                 
+                        <div class="w-[300px]">
+                            <button >Найти ближайший</button>
+                        <span>
+                            <h1>ТРЦ «АФИМОЛЛ Сити»</h1>
+                            <p>г. Москва, Пресненская набережная, д. 2, этаж 1</p>
+                            <p>вск-чт с 10:00 до 22:00. пт-сб с 10:00 до 23:00</p>
+                            <p>+7 (968) 999-07-77</p>
+                            <a href=""><img src="" alt="">Проложить маршрут</a>
+                        
+                        </span>
+                        </div>
+
+                    </div>
             </div>
         </section> 
     </main>
@@ -158,6 +179,8 @@
             </div>
         </div>
     </footer>
+
+    
 </body>
 
 </html>
