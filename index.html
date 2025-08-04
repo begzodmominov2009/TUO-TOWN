@@ -5,14 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link rel="stylesheet" href="./css/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-    <header class="bg-[#212121CC] py-[20px] pr-[20px] fixed top-0 w-[100%]">
+    <header class="bg-[#212121CC] py-[20px] pr-[20px] fixed top-0 z-10 w-[100%]">
         <div class="container mx-auto flex justify-between items-center">
             <ul class="flex gap-[35px] items-center">
-                <li>
+                <li id="Toggle">
                     <img class="ml-[20px] md:hidden w-[23px] h-[25px]" src="../../assets/home/Group 22.png"
                         alt="toggle">
                 </li>
@@ -26,7 +34,7 @@
                 </li>
             </ul>
 
-            <a href="./home.html">
+            <a href="./index.html">
                 <img class="w-[146px] h-[35-px]"
                     src="../../assets/home/806ee7e0078d7d7a77124a3449dc254854a49a9a (1).jpg" alt="logo">
             </a>
@@ -49,43 +57,62 @@
             </ul>
         </div>
     </header>
-    <!-- 
-    <ul
-        class="flex-col gap-[50px] items-start justify-center fixed top-0   vw-[black] w-screen h-screen sm:flex gap-[35px] items-center bg-[black] vw-[black] w-screen h-screen z-10">
-        <li class="flex gap-[10px] text-[#ADACAC] text-[20px]">
-            <img class="hidden md:flex" src="../../assets/home/search.png" alt="search">
-            <p>Search</p>
+
+    <ul id="menu_bar"
+        class="flex-col rounded-tl-md-[50px] rounded-tr-[35px] rounded-br-[35px] transform translate-x-[-1550px] gap-[50px]  justify-center fixed top-0 w-[50vw] px-[20px] h-screen flex gap-[35px] items-center bg-[#353535] vw-[black] w-[50vw] h-screen z-10">
+        <li
+            class="flex gap-[10px] border-2 border-white rounded-[50px] max-w-[250px] w-full py-[10px] flex justify-start px-[30px] items-center text-[#ADACAC] text-[20px]">
+            <a class="flex items-center gap-[10px] text-[#ADACAC] text-[20px]" href="./index.html">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#ADACAC">
+                    <path
+                        d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z" />
+                </svg>
+                <p class="text-[14px] sm:text-[16px]">Home</p>
+            </a>
         </li>
-        <li>
+        <li
+            class="flex gap-[10px] border-2 border-white rounded-[50px] max-w-[250px] w-full py-[10px] flex justify-start px-[30px] items-center text-[#ADACAC] text-[20px]">
             <a class="flex items-center gap-[10px] text-[#ADACAC] text-[20px]" href="./pages/map.html">
-                <img class="hidden md:flex w-[23px] h-[25px]" src="../../assets/home/map pin.png" alt="map">
-                <p>Location</p>
+                <img class=" md:flex w-[23px] h-[25px]" src="../../assets/home/map pin.png" alt="map">
+                <p class="text-[14px] sm:text-[16px]">Location</p>
             </a>
         </li>
-        <li>
+        <li
+            class="flex gap-[10px] border-2 border-white rounded-[50px] max-w-[250px] w-full py-[10px] flex justify-start px-[30px] items-center text-[#ADACAC] text-[20px]">
             <a class="flex items-center gap-[10px] text-[#ADACAC] text-[20px]" href="./pages/product.html">
-                <img class="hidden md:flex" src="../../assets/home/product.png" alt="logo">
-                <p>Product</p>
+                <img class=" md:flex" src="../../assets/home/product.png" alt="logo">
+                <p class="text-[14px] sm:text-[16px]">Product</p>
             </a>
         </li>
-        <li>
+        <li
+            class="flex gap-[10px] border-2 border-white rounded-[50px] max-w-[250px] w-full py-[10px] flex justify-start px-[30px] items-center text-[#ADACAC] text-[20px]">
             <a class="flex items-center gap-[10px] text-[#ADACAC] text-[20px]" href="./pages/servis.html">
-                <img class="hidden md:flex" src="../../assets/home/mail.png" alt="mail">
-                <p>Servis</p>
+                <img class=" md:flex" src="../../assets/home/mail.png" alt="mail">
+                <p class="text-[14px] sm:text-[16px]">Servis</p>
             </a>
         </li>
-    </ul> -->
+        <svg id="close" class="absolute top-10 right-5" xmlns="http://www.w3.org/2000/svg" height="24px"
+            viewBox="0 -960 960 960" width="24px" fill="#ffff">
+            <path
+                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+        </svg>
+    </ul>
 
     <main>
-        <section class="bg-[url(./assets/home/bg-img.png)]">
-            <div class="container mx-auto px-[20px]">
-                <h1 class="text-[] text-[41px]">Исключительное качество <br> без компромиссов</h1>
-                <p class="text-[white]">Ножи «Tuotown» – это главный инструмент <br> поваров и секрет кулинарного мастерства</p>
-                <button class="text-[white] border-solid[5px]">
-                    <a href="./pages/product.html">ПОДРОБНЕЕ</a>
-                </button>
-            </div>
-        </section>
+        <div class="owl-carousel owl-theme">
+            <section class="bg-[url(./assets/home/bg-img.png)] item bg-no-repeat bg-center bg-cover">
+                <div class="container mx-auto px-[20px]">
+                    <h1 class="text-[white] text-[41px] pt-[150px] leading-[48px]">Исключительное качество <br> без
+                        компромиссов</h1>
+                    <p class="text-[white]">Ножи «Tuotown» – это главный инструмент <br> поваров и секрет кулинарного
+                        мастерства</p>
+                    <button class="text-[white] border-solid[5px]">
+                        <a href="./pages/product.html">ПОДРОБНЕЕ</a>
+                    </button>
+                </div>
+            </section>
+        </div>
     </main>
     <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
     <footer class="bg-[#272727] xl:h-[386px] pt-[44px]">
@@ -172,6 +199,14 @@
             </div>
         </div>
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+        integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./Js/home.js"></script>
 </body>
 
 </html>
