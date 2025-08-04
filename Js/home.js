@@ -14,30 +14,6 @@ close.addEventListener("click" , () => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 $(document).ready(function () {
     $(".owl-carousel").owlCarousel();
 });
@@ -48,7 +24,7 @@ $(".owl-carousel").owlCarousel({
     nav: true,
     dots: false,
     autoplay: true,
-    autoplayTimeout: 3000,
+    autoplayTimeout: 2000,
     responsive: {
         0: {
             items: 1,

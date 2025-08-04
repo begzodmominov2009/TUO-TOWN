@@ -1,5 +1,45 @@
-.menus{
+.menus {
     transform: translateX(-0px) !important;
     /* opacity: 0; */
 
+}
+
+.owl-prev span {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    font-size: 30px;
+    display: inline-block;
+    background-color: transparent;
+    top: 625px;
+    color: white;
+    margin-left: 130px;
+    border: 2px solid gray;
+    left: 0;
+    position: absolute;
+
+}
+.owl-prev span:hover{
+    background-color: rgba(255, 0, 0, 0.623);
+    border: none;
+}
+
+.owl-next span {
+    width: 50px;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    height: 50px;
+    border-radius: 25px;
+    font-size: 30px;
+    border: 2px solid gray;
+    display: inline-block;
+    background-color: transparent;
+    color: white;
+    margin-right: 100px;
+    top: 630px;
+}
+.owl-next span:hover{
+    background-color: rgba(255, 0, 0, 0.623);
+    border: none;
 }

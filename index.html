@@ -14,6 +14,11 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
         integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            background-color: #373737;
+        }
+    </style>
 </head>
 
 <body>
@@ -59,7 +64,7 @@
     </header>
 
     <ul id="menu_bar"
-        class="flex-col rounded-tl-md-[50px] rounded-tr-[35px] rounded-br-[35px] transform translate-x-[-1550px] gap-[50px]  justify-center fixed top-0 w-[50vw] px-[20px] h-screen flex gap-[35px] items-center bg-[#353535] vw-[black] w-[50vw] h-screen z-10">
+        class="flex-col rounded-tl-md-[50px] rounded-tr-[35px] rounded-br-[35px] transform translate-x-[-15050px] gap-[50px]  justify-center fixed top-0 w-[50vw] px-[20px] h-screen flex gap-[35px] items-center bg-[#353535] vw-[black] w-[50vw] h-screen z-10">
         <li
             class="flex gap-[10px] border-2 border-[#ADACAC] rounded-[50px] max-w-[250px] w-full py-[10px] flex justify-start px-[30px] items-center text-[#ADACAC] text-[20px]">
             <a class="flex items-center gap-[10px] text-[#0cce0c] text-[20px]" href="./index.html">
@@ -112,18 +117,64 @@
     </ul>
 
     <main>
-        <div class="owl-carousel owl-theme">
-            <section class="bg-[url(./assets/home/bg-img.png)] item bg-no-repeat bg-center bg-cover">
+        <div class="owl-carousel owl-theme relative">
+            <section
+                class="bg-[url(./assets/home/bg-img.png)] item bg-no-repeat bg-center bg-cover pb-[197px] pt-[250px]">
                 <div class="container mx-auto px-[20px]">
-                    <h1 class="text-[white] text-[41px] pt-[150px] leading-[48px] pl-[20px]">Исключительное качество
+                    <h1 class="text-[white] text-[41px]  leading-[48px] pl-[20px]">Исключительное качество
                         <br> без
-                        компромиссов</h1>
+                        компромиссов
+                    </h1>
                     <p class="text-[white] text-[19px] pt-[24px] pl-[20px]">Ножи «Tuotown» – это главный инструмент <br>
                         поваров и секрет кулинарного
                         мастерства</p>
                     <button
-                        class="text-[white] text-14px border-2 border-[red] bg-transparent ml-[20px] mt-[35px] w-[165px] h-[55px] rounded-[27px]">
-                        <a href="./pages/product.html">ПОДРОБНЕЕ</a>
+                        class="text-[white] text-14px border-2 trasition-[0.5s] border-[red] bg-transparent ml-[20px] mt-[35px] w-[165px] h-[55px] rounded-[27px] hover:bg-[red]">
+                        <a href="./pages/basket.html">ПОДРОБНЕЕ</a>
+                    </button>
+                    <div>
+                        <div class="flex gap-[30px]">
+                            <div>
+                                <span>1</span>
+                            </div>
+                            <div>
+                                <span>2</span>
+                            </div>
+                            <div>
+                                <span>3</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section
+                class="bg-[url(./assets/home/cook.png)] item bg-no-repeat bg-center bg-cover pb-[197px] pt-[250px]">
+                <div class="container mx-auto px-[20px]">
+                    <h1 class="text-[white] text-[41px]  leading-[48px] pl-[20px]">ожи «Tuotown» – это <br> главный
+                        инструмент <br>
+                        поваров и секрет
+                    </h1>
+                    <p class="text-[white] text-[19px] pt-[24px] pl-[20px]"></p>
+                    <button
+                        class="text-[white] text-14px border-2 trasition-[0.5s] border-[red] bg-transparent ml-[20px] mt-[35px] w-[165px] h-[55px] rounded-[27px] hover:bg-[red]">
+                        <a href="./pages/basket.html">ПОДРОБНЕЕ</a>
+                    </button>
+                </div>
+            </section>
+
+            <section
+                class="bg-[url(./assets/home/knefi-2.png)] item bg-no-repeat bg-center bg-cover pb-[197px] pt-[250px]">
+                <div class="container mx-auto px-[20px]">
+                    <h1 class="text-[white] text-[41px]  leading-[48px] pl-[20px]">Свежие помидоры рядом <br> с острым
+                        ножом.
+                    </h1>
+                    <p class="text-[white] text-[19px] pt-[24px] pl-[20px]">Ножи «Tuotown» – это главный инструмент <br>
+                        поваров и секрет кулинарного
+                        мастерства</p>
+                    <button
+                        class="text-[white] text-14px border-2 trasition-[0.5s] border-[red] bg-transparent ml-[20px] mt-[35px] w-[165px] h-[55px] rounded-[27px] hover:bg-[red]">
+                        <a href="./pages/basket.html">ПОДРОБНЕЕ</a>
                     </button>
                 </div>
             </section>
@@ -131,6 +182,7 @@
     </main>
 
     <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+
     <footer class="bg-[#272727] xl:h-[386px] pt-[44px]">
         <div class="container mx-auto px-[20px]">
             <div class="flex justify-center  xl:flex justify-between  flex-wrap">
