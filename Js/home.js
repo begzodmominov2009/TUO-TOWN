@@ -3,10 +3,13 @@ const menu_bar = document.getElementById("menu_bar")
 const close = document.getElementById("close")
 
 
-MenuToggle.addEventListener("click" , () => {
+MenuToggle.addEventListener("click", () => {
     menu_bar.classList.add("menus")
 })
-close.addEventListener("click" , () => {
+close.addEventListener("click", () => {
+    menu_bar.classList.remove("menus")
+})
+window.addEventListener("scroll", () => {
     menu_bar.classList.remove("menus")
 })
 
@@ -37,3 +40,19 @@ $(".owl-carousel").owlCarousel({
         },
     },
 });
+$('.owl-none').owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: true,
+    responsive: {
+        0: {
+            items: 1
+        },
+        600: {
+            items: 1
+        },
+        1000: {
+            items: 1
+        }
+    }
+})
