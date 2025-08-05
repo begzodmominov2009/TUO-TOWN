@@ -1,6 +1,6 @@
 const MenuToggle = document.getElementById("Toggle");
 const menu_bar = document.getElementById("menu_bar")
-const close = document.getElementById("close")
+const close = document.getElementById("close");
 
 
 MenuToggle.addEventListener("click", () => {
