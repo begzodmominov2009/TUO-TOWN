@@ -6,19 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Basket</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
     <header class="bg-[#212121CC] py-[20px] pr-[20px]">
         <div class="container mx-auto flex justify-between items-center">
             <ul class="flex gap-[35px] items-center">
-                <li>
-                    <img class="ml-[20px] md:hidden w-[23px] h-[25px]" src="../../assets/home/Group 22.png"
+                <li id="Toggle">
+                    <img class="ml-[20px] md:hidden w-[23px] h-[25px]" src="../assets/home/Group 22.png"
                         alt="toggle">
                 </li>
                 <li>
                     <a href="./map.html">
-                        <img class="hidden md:flex w-[23px] h-[25px]" src="../../assets/home/map pin.png" alt="map">
+                        <img class="hidden md:flex w-[23px] h-[25px]" src="../assets/home/map pin.png" alt="map">
                     </a>
                 </li>
                 <li>
@@ -26,29 +27,82 @@
                 </li>
             </ul>
 
-            <a href="../home.html">
+            <a href="../index.html">
                 <img class="w-[146px] h-[35-px]"
-                    src="../../assets/home/806ee7e0078d7d7a77124a3449dc254854a49a9a (1).jpg" alt="logo">
+                    src="../assets/home/806ee7e0078d7d7a77124a3449dc254854a49a9a (1).jpg" alt="logo">
 
             </a>
             <ul class="flex gap-[35px] items-center">
                 <li>
                     <a href="./product.html">
-                        <img class="hidden md:flex" src="../../assets/home/product.png" alt="logo">
+                        <img class="hidden md:flex" src="../assets/home/product.png" alt="logo">
 
                     </a>
                 </li>
                 <li>
                     <a href="./servis.html">
-                        <img class="hidden md:flex" src="../../assets/home/mail.png" alt="mail">
+                        <img class="hidden md:flex" src="../assets/home/mail.png" alt="mail">
                     </a>
                 </li>
                 <li>
-                    <img class="hidden md:flex" src="../../assets/home/search.png" alt="search">
+                    <img class="hidden md:flex" src="../assets/home/search.png" alt="search">
                 </li>
             </ul>
         </div>
     </header>
+
+    <ul id="menu_bar"
+        class="flex-col rounded-tl-md-[50px] rounded-tr-[35px] rounded-br-[35px] transform translate-x-[-1550px] gap-[50px]  justify-center fixed top-0 w-[50vw] px-[20px] h-screen flex gap-[35px] items-center bg-[#353535] vw-[black] w-[50vw] h-screen z-10">
+        <li
+            class="flex gap-[10px] border-2 border-[#ADACAC] rounded-[50px] max-w-[250px] w-full py-[10px] flex justify-start px-[30px] items-center text-[#ADACAC] text-[20px]">
+            <a class="flex items-center gap-[10px] text-[#ADACAC] text-[20px]" href="../index.html">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#ADACAC">
+                    <path
+                        d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z" />
+                </svg>
+                <p class="text-[14px] sm:text-[16px]">Home</p>
+            </a>
+        </li>
+        <li
+            class="flex gap-[10px] border-2 border-[#ADACAC] rounded-[50px] max-w-[250px] w-full py-[10px] flex justify-start px-[30px] items-center text-[#ADACAC] text-[20px]">
+            <a class="flex items-center gap-[10px] text-[#ADACAC] text-[20px]" href="./map.html">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#ADACAC">
+                    <path
+                        d="M480-80q-106 0-173-33.5T240-200q0-24 14.5-44.5T295-280l63 59q-9 4-19.5 9T322-200q13 16 60 28t98 12q51 0 98.5-12t60.5-28q-7-8-18-13t-21-9l62-60q28 16 43 36.5t15 45.5q0 53-67 86.5T480-80Zm1-220q99-73 149-146.5T680-594q0-102-65-154t-135-52q-70 0-135 52t-65 154q0 67 49 139.5T481-300Zm-1 100Q339-304 269.5-402T200-594q0-71 25.5-124.5T291-808q40-36 90-54t99-18q49 0 99 18t90 54q40 36 65.5 89.5T760-594q0 94-69.5 192T480-200Zm0-320q33 0 56.5-23.5T560-600q0-33-23.5-56.5T480-680q-33 0-56.5 23.5T400-600q0 33 23.5 56.5T480-520Zm0-80Z" />
+                </svg>
+                <p class="text-[14px] sm:text-[16px]">Location</p>
+            </a>
+        </li>
+        <li
+            class="flex gap-[10px] border-2 border-[#ADACAC] rounded-[50px] max-w-[250px] w-full py-[10px] flex justify-start px-[30px] items-center text-[#ADACAC] text-[20px]">
+            <a class="flex items-center gap-[10px] text-[#ADACAC] text-[20px]" href="./product.html">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#ADACAC">
+                    <path
+                        d="M240-80q-33 0-56.5-23.5T160-160v-480q0-33 23.5-56.5T240-720h80q0-66 47-113t113-47q66 0 113 47t47 113h80q33 0 56.5 23.5T800-640v480q0 33-23.5 56.5T720-80H240Zm0-80h480v-480h-80v80q0 17-11.5 28.5T600-520q-17 0-28.5-11.5T560-560v-80H400v80q0 17-11.5 28.5T360-520q-17 0-28.5-11.5T320-560v-80h-80v480Zm160-560h160q0-33-23.5-56.5T480-800q-33 0-56.5 23.5T400-720ZM240-160v-480 480Z" />
+                </svg>
+                <p class="text-[14px] sm:text-[16px]">Product</p>
+            </a>
+        </li>
+        <li
+            class="flex gap-[10px] border-2 border-[#ADACAC] rounded-[50px] max-w-[250px] w-full py-[10px] flex justify-start px-[30px] items-center text-[#ADACAC] text-[20px]">
+            <a class="flex items-center gap-[10px] text-[#ADACAC] text-[20px]" href="./servis.html">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#ADACAC">
+                    <path
+                        d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z" />
+                </svg>
+                <p class="text-[14px] sm:text-[16px]">Servis</p>
+            </a>
+        </li>
+        <svg id="close" class="absolute top-10 right-5" xmlns="http://www.w3.org/2000/svg" height="24px"
+            viewBox="0 -960 960 960" width="24px" fill="#ffff">
+            <path
+                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+        </svg>
+    </ul>
 
     <footer class="bg-[#272727] xl:h-[386px] pt-[44px]">
         <div class="container mx-auto px-[20px]">
@@ -56,7 +110,7 @@
                 <div>
                     <div class="flex gap-[26px] items-center">
                         <img class=" w-[147px] h-[37px] sm:w-[197px] h-[47px]"
-                            src="../../assets/home/806ee7e0078d7d7a77124a3449dc254854a49a9a (1).jpg" alt="logo">
+                            src="../assets/home/806ee7e0078d7d7a77124a3449dc254854a49a9a (1).jpg" alt="logo">
                         <p class="text-[white] leading-[22px] text-[13px]">легендарные ножи, <br> создающие шедевры</p>
                     </div>
                     <div>
@@ -100,10 +154,18 @@
                             <h3>Мы в соцсетях</h3>
                         </div>
                         <div class="flex gap-[10px]">
-                            <img src="../../assets/home/facebook (2).png" alt="fecebook">
-                            <img src="../../assets/home/vk.png" alt="vk">
-                            <img src="../../assets/home/instagramm.png" alt="instagram">
-                            <img src="../../assets/home/youtube.png" alt="youtube">
+                            <a href="https://www.facebook.com/index.php/">
+                                <img src="../assets/home/facebook (2).png" alt="fecebook">
+                            </a>
+                            <a href="https://vk.com/">
+                                <img src="../assets/home/vk.png" alt="vk">
+                            </a>
+                            <a href="https://www.instagram.com/">
+                                <img src="../assets/home/instagramm.png" alt="instagram">
+                            </a>
+                            <a href="https://www.youtube.com/">
+                                <img src="../assets/home/youtube.png" alt="youtube">
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -119,7 +181,7 @@
                         <p class="pt-[30px]">08:00 — 18:00, ежедневно</p>
                         <p class="pt-[18px]">Россия, Москва, МКАД, 19-й километр, <br>
                             вл20с1, вход Ф, 22-68-70</p>
-                        <img class="pt-[32px]" src="../../assets/home/footer.img.png" alt="logo">
+                        <img class="pt-[32px]" src="../assets/home/footer.img.png" alt="logo">
                     </div>
                 </div>
             </div>
@@ -130,10 +192,12 @@
                     защищены и
                     принадлежат
                     правообладателям.</p>
-                <img class="hidden sm:flex" src="../../assets/home/footer-logo.png" alt="logo">
+                <img class="hidden sm:flex" src="../assets/home/footer-logo.png" alt="logo">
             </div>
         </div>
     </footer>
+
+    <script src="../Js/home.js"></script>
 </body>
 
 </html>

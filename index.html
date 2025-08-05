@@ -5,16 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link rel="stylesheet" href="./css/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            background-color: #373737;
+        }
+    </style>
 </head>
 
 <body>
-    <header class="bg-[#212121CC] py-[20px] pr-[20px] fixed top-0 w-[100%]">
+
+    <header class="bg-[#212121CC] py-[20px] pr-[20px] fixed top-0 z-10 w-[100%]">
         <div class="container mx-auto flex justify-between items-center">
             <ul class="flex gap-[35px] items-center">
-                <li>
-                    <img class="ml-[20px] md:hidden w-[23px] h-[25px]" src="../../assets/home/Group 22.png"
-                        alt="toggle">
+                <li id="Toggle">
+                    <img class="ml-[20px] w-[23px] h-[25px]" src="../../assets/home/Group 22.png" alt="toggle">
                 </li>
                 <li>
                     <a href="./pages/map.html">
@@ -26,7 +39,7 @@
                 </li>
             </ul>
 
-            <a href="./home.html">
+            <a href="./index.html">
                 <img class="w-[146px] h-[35-px]"
                     src="../../assets/home/806ee7e0078d7d7a77124a3449dc254854a49a9a (1).jpg" alt="logo">
             </a>
@@ -49,45 +62,613 @@
             </ul>
         </div>
     </header>
-    <!-- 
-    <ul
-        class="flex-col gap-[50px] items-start justify-center fixed top-0   vw-[black] w-screen h-screen sm:flex gap-[35px] items-center bg-[black] vw-[black] w-screen h-screen z-10">
-        <li class="flex gap-[10px] text-[#ADACAC] text-[20px]">
-            <img class="hidden md:flex" src="../../assets/home/search.png" alt="search">
-            <p>Search</p>
+
+    <ul id="menu_bar"
+        class="flex-col rounded-tl-md-[50px] rounded-tr-[35px] rounded-br-[35px] transform translate-x-[-15050px] gap-[50px]  justify-center fixed top-0 w-[50vw] px-[20px] h-screen flex gap-[35px] items-center bg-[#353535] vw-[black] w-[50vw] h-screen z-10">
+        <li
+            class="flex gap-[10px] border-2 border-[#ADACAC] rounded-[50px] max-w-[250px] w-full py-[10px] flex justify-start px-[30px] items-center text-[#ADACAC] text-[20px]">
+            <a class="flex items-center gap-[10px] text-[#0cce0c] text-[20px]" href="./index.html">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#0cce0c">
+                    <path
+                        d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z" />
+                </svg>
+                <p class="text-[14px] sm:text-[16px]">Home</p>
+            </a>
         </li>
-        <li>
+        <li
+            class="flex gap-[10px] border-2 border-[#ADACAC] rounded-[50px] max-w-[250px] w-full py-[10px] flex justify-start px-[30px] items-center text-[#ADACAC] text-[20px]">
             <a class="flex items-center gap-[10px] text-[#ADACAC] text-[20px]" href="./pages/map.html">
-                <img class="hidden md:flex w-[23px] h-[25px]" src="../../assets/home/map pin.png" alt="map">
-                <p>Location</p>
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#ADACAC">
+                    <path
+                        d="M480-80q-106 0-173-33.5T240-200q0-24 14.5-44.5T295-280l63 59q-9 4-19.5 9T322-200q13 16 60 28t98 12q51 0 98.5-12t60.5-28q-7-8-18-13t-21-9l62-60q28 16 43 36.5t15 45.5q0 53-67 86.5T480-80Zm1-220q99-73 149-146.5T680-594q0-102-65-154t-135-52q-70 0-135 52t-65 154q0 67 49 139.5T481-300Zm-1 100Q339-304 269.5-402T200-594q0-71 25.5-124.5T291-808q40-36 90-54t99-18q49 0 99 18t90 54q40 36 65.5 89.5T760-594q0 94-69.5 192T480-200Zm0-320q33 0 56.5-23.5T560-600q0-33-23.5-56.5T480-680q-33 0-56.5 23.5T400-600q0 33 23.5 56.5T480-520Zm0-80Z" />
+                </svg>
+                <p class="text-[14px] sm:text-[16px]">Location</p>
             </a>
         </li>
-        <li>
+        <li
+            class="flex gap-[10px] border-2 border-[#ADACAC] rounded-[50px] max-w-[250px] w-full py-[10px] flex justify-start px-[30px] items-center text-[#ADACAC] text-[20px]">
             <a class="flex items-center gap-[10px] text-[#ADACAC] text-[20px]" href="./pages/product.html">
-                <img class="hidden md:flex" src="../../assets/home/product.png" alt="logo">
-                <p>Product</p>
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#ADACAC">
+                    <path
+                        d="M240-80q-33 0-56.5-23.5T160-160v-480q0-33 23.5-56.5T240-720h80q0-66 47-113t113-47q66 0 113 47t47 113h80q33 0 56.5 23.5T800-640v480q0 33-23.5 56.5T720-80H240Zm0-80h480v-480h-80v80q0 17-11.5 28.5T600-520q-17 0-28.5-11.5T560-560v-80H400v80q0 17-11.5 28.5T360-520q-17 0-28.5-11.5T320-560v-80h-80v480Zm160-560h160q0-33-23.5-56.5T480-800q-33 0-56.5 23.5T400-720ZM240-160v-480 480Z" />
+                </svg>
+                <p class="text-[14px] sm:text-[16px]">Product</p>
             </a>
         </li>
-        <li>
+        <li
+            class="flex gap-[10px] border-2 border-[#ADACAC] rounded-[50px] max-w-[250px] w-full py-[10px] flex justify-start px-[30px] items-center text-[#ADACAC] text-[20px]">
             <a class="flex items-center gap-[10px] text-[#ADACAC] text-[20px]" href="./pages/servis.html">
-                <img class="hidden md:flex" src="../../assets/home/mail.png" alt="mail">
-                <p>Servis</p>
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#ADACAC">
+                    <path
+                        d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z" />
+                </svg>
+                <p class="text-[14px] sm:text-[16px]">Servis</p>
             </a>
         </li>
-    </ul> -->
+        <svg id="close" class="absolute top-10 right-5" xmlns="http://www.w3.org/2000/svg" height="24px"
+            viewBox="0 -960 960 960" width="24px" fill="#ffff">
+            <path
+                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+        </svg>
+    </ul>
 
     <main>
-        <section class="bg-[url(./assets/home/bg-img.png)]">
-            <div class="container mx-auto px-[20px]">
-                <h1 class="text-[] text-[41px]">Исключительное качество <br> без компромиссов</h1>
-                <p class="text-[white]">Ножи «Tuotown» – это главный инструмент <br> поваров и секрет кулинарного мастерства</p>
-                <button class="text-[white] border-solid[5px]">
-                    <a href="./pages/product.html">ПОДРОБНЕЕ</a>
-                </button>
+
+        <div class="owl-carousel owl-theme relative">
+            <section
+                class="bg-[url(./assets/home/bg-img.png)] item bg-no-repeat bg-center bg-cover pb-[197px] h-[590px] pt-[120px] sm:pt-[200px]">
+                <div class="container mx-auto px-[20px]">
+                    <h1 class="text-[white] text-[32px] sm:text-[41px] leading-[37px]  sm:leading-[48px] pl-[20px]">
+                        Исключительное качество
+                        <br> без
+                        компромиссов
+                    </h1>
+                    <p class="text-[white] text-[17px] sm:text-[19px] pt-[24px] pl-[20px]">Ножи «Tuotown» – это главный
+                        инструмент <br>
+                        поваров и секрет кулинарного
+                        мастерства</p>
+                    <button
+                        class="text-[white] text-14px border-2 trasition-[0.5s] border-[red] bg-transparent ml-[20px] mt-[35px] w-[165px] h-[55px] rounded-[27px] hover:bg-[red]">
+                        <a href="./pages/basket.html">ПОДРОБНЕЕ</a>
+                    </button>
+                    <div class="section_head mt-[85px] sm:mt-[65px]">
+                        <div class="flex gap-[30px]">
+                            <div>
+                                <span class="section_span border-0 bg-[red]">1</span>
+                            </div>
+                            <div>
+                                <span class="section_span2">2</span>
+                            </div>
+                            <div>
+                                <span class="section_span3">3</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section
+                class="bg-[url(./assets/home/cook.png)] item bg-no-repeat bg-center bg-cover pb-[197px] h-[590px] pt-[200px] sm:pt-[200px]">
+                <div class="container mx-auto px-[20px]">
+                    <h1 class="text-[white] text-[32px] sm:text-[41px] leading-[45px] sm:leading-[48px] pl-[20px]">ожи
+                        «Tuotown» – это <br> главный
+                        инструмент <br>
+                        поваров и секрет
+                    </h1>
+                    <p class="text-[white] text-[19px] pt-[24px] pl-[20px]"></p>
+                    <button
+                        class="text-[white] text-14px border-2 trasition-[0.5s] border-[red] bg-transparent ml-[20px] mt-[35px] w-[165px] h-[55px] rounded-[27px] hover:bg-[red]">
+                        <a href="./pages/basket.html">ПОДРОБНЕЕ</a>
+                    </button>
+                    <div class="section_head mt-[85px] sm:mt-[60px]">
+                        <div class="flex gap-[30px]">
+                            <div>
+                                <span class="section_span">1</span>
+                            </div>
+                            <div>
+                                <span class="section_span2 section_span border-0 bg-[red]">2</span>
+                            </div>
+                            <div>
+                                <span class="section_span3">3</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section
+                class="bg-[url(./assets/home/knefi-2.png)] item bg-no-repeat bg-center bg-cover pb-[197px] h-[590px] pt-[120px] sm:pt-[200px]">
+                <div class="container mx-auto px-[20px]">
+                    <h1 class="text-[white] text-[32px] sm:text-[41px] leading-[37px] sm:leading-[48px] pl-[20px]">
+                        Свежие помидоры рядом <br> с острым
+                        ножом.
+                    </h1>
+                    <p class="text-[white] text-[17px] sm:text-[19px] pt-[24px] pl-[20px]">Ножи «Tuotown» – это главный
+                        инструмент <br>
+                        поваров и секрет кулинарного
+                        мастерства</p>
+                    <button
+                        class="text-[white] text-14px border-2 trasition-[0.5s] border-[red] bg-transparent ml-[20px] mt-[35px] w-[165px] h-[55px] rounded-[27px] hover:bg-[red]">
+                        <a href="./pages/basket.html">ПОДРОБНЕЕ</a>
+                    </button>
+                    <div class="section_head mt-[85px] sm:mt-[60px]">
+                        <div class="flex gap-[30px]">
+                            <div>
+                                <span class="section_span">1</span>
+                            </div>
+                            <div>
+                                <span class="section_span2">2</span>
+                            </div>
+                            <div>
+                                <span class="section_span3 section_span border-0 bg-[red]">3</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section id="about" class="mt-[60px]">
+            <div class="container mx-auto px-[20xp]">
+                <div class="grid grid-cols-2 flex-col gap-[50px] text-[14px]  sm:grid-cols-4 text-[#ADACAC]">
+                    <div class="flex flex-col gap-[30px] items-center hover:text-[red] trasition-0.5s">
+                        <img class="w-[42px] h-[46px]" src="./assets/home/about-1.png" alt="img">
+                        <p>Кухонные ножи</p>
+                    </div>
+                    <div class="flex flex-col gap-[30px] items-center hover:text-[red] trasition-0.5s">
+                        <img class="w-[42px] h-[46px]" src="./assets/home/about-2.png" alt="img">
+                        <p>Складные ножи</p>
+                    </div>
+                    <div class="flex flex-col gap-[30px] items-center hover:text-[red] trasition-0.5s">
+                        <img class="w-[42px] h-[46px]" src="./assets/home/about-3.png" alt="img">
+                        <p>Точилки для ножей</p>
+                    </div>
+                    <div class="flex flex-col gap-[30px] items-center hover:text-[red] trasition-0.5s">
+                        <img class="w-[42px] h-[46px]" src="./assets/home/about-4.png" alt="img">
+                        <p>Аксессуары для кухни</p>
+                    </div>
+                </div>
             </div>
         </section>
+
+        <section id="product" class="mt-[60px]">
+            <div class="container mx-auto px-[20px]">
+                <div class="flex items-start justify-center sm:justify-between gap-[20px] flex-wrap">
+                    <div class="relative max-w-[590px]">
+                        <img class="" src="./assets/home/product-1.png" alt="img">
+                        <p class="absolute bottom-[28px] text-[white] text-[12px] sm:text-[17px] pl-[26px]">
+                            Познакомьтесь с коллекцией ножей TUOTOWN</p>
+                        <img class="absolute bottom-[38px]  right-[20px]" src="./assets/home/right.png" alt="raght">
+                    </div>
+
+                    <div
+                        class="max-w-[286px] h-[422px] bg-[#272727] rounded-[20px] hover:opacity-[1] relative mt-[20px ] sm:mt-[70px] lg:mt-[0px]   ">
+                        <img class=" pt-[95px] px-[11px]" src="./assets/home/product-2.png" alt="img">
+                        <div>
+                            <p class="text-[white] text-[14px] mt-[110px] ml-[5px]">Складной нож SQ01-B</p>
+                        </div>
+                        <div class="flex gap-[20px] ml-[5px] text-[14px]">
+                            <p class=" text-[#ADACAC]">850 р.</p>
+                            <p class="text-[red]">Новинка</p>
+                        </div>
+                        <div>
+                            <a href="./pages/catalog.html">
+                                <svg class="w-[1px]h-[37px] bg-[red] rounded-tl-[10px] rounded-bl-[10px] border-2 border-[red] opacity-[] absolute top-5 right-14"
+                                    xmlns="http://www.w3.org/2000/svg" height="27px" viewBox="0 -960 960 960"
+                                    width="27px" fill="#ffff">
+                                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z" />
+                                </svg>
+                            </a>
+                            <a href="./pages/basket.html">
+                                <svg class="w-[35px]h-[37px] bg-[red] border-2 rounded-br-[10px] rounded-tr-[10px] border-[red] opacity-[] absolute top-5 right-8"
+                                    xmlns="http://www.w3.org/2000/svg" height="27px" viewBox="0 -960 960 960"
+                                    width="27px" fill="#ffff">
+                                    <path
+                                        d="M200-80q-33 0-56.5-23.5T120-160v-480q0-33 23.5-56.5T200-720h80q0-83 58.5-141.5T480-920q83 0 141.5 58.5T680-720h80q33 0 56.5 23.5T840-640v480q0 33-23.5 56.5T760-80H200Zm0-80h560v-480H200v480Zm280-240q83 0 141.5-58.5T680-600h-80q0 50-35 85t-85 35q-50 0-85-35t-35-85h-80q0 83 58.5 141.5T480-400ZM360-720h240q0-50-35-85t-85-35q-50 0-85 35t-35 85ZM200-160v-480 480Z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div
+                        class="max-w-[286px] h-[422px] bg-[#272727] rounded-[20px] relative mt-[70px] sm:mt-[70px] lg:mt-[0px]">
+                        <img class="pt-[95px] px-[11px]" src="./assets/home/product-3.png" alt="img">
+                        <div>
+                            <p class="text-[white] text-[14px] mt-[165px] ml-[5px]">Складной нож SQ01-B</p>
+                        </div>
+                        <div class="flex gap-[20px] ml-[5px] text-[14px]">
+                            <p class="text-[#ADACAC]">12 850 р.</p>
+                        </div>
+                        <div>
+                            <a href="./pages/catalog.html">
+                                <svg class="w-[1px]h-[37px] bg-[red] rounded-tl-[10px] rounded-bl-[10px] border-2 border-[red] opacity-[] absolute top-5 right-14"
+                                    xmlns="http://www.w3.org/2000/svg" height="27px" viewBox="0 -960 960 960"
+                                    width="27px" fill="#ffff">
+                                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z" />
+                                </svg>
+                            </a>
+                            <a href="./pages/basket.html">
+                                <svg class="w-[35px]h-[37px] bg-[red] border-2 rounded-br-[10px] rounded-tr-[10px] border-[red] opacity-[] absolute top-5 right-8"
+                                    xmlns="http://www.w3.org/2000/svg" height="27px" viewBox="0 -960 960 960"
+                                    width="27px" fill="#ffff">
+                                    <path
+                                        d="M200-80q-33 0-56.5-23.5T120-160v-480q0-33 23.5-56.5T200-720h80q0-83 58.5-141.5T480-920q83 0 141.5 58.5T680-720h80q33 0 56.5 23.5T840-640v480q0 33-23.5 56.5T760-80H200Zm0-80h560v-480H200v480Zm280-240q83 0 141.5-58.5T680-600h-80q0 50-35 85t-85 35q-50 0-85-35t-35-85h-80q0 83 58.5 141.5T480-400ZM360-720h240q0-50-35-85t-85-35q-50 0-85 35t-35 85ZM200-160v-480 480Z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="flex items-start justify-center sm:justify-between gap-[20px] flex-wrap mt-[70px] sm:mt-[70px] lg:mt[0px]">
+                    <div
+                        class="max-w-[286px] h-[422px] bg-[#272727] rounded-[20px] hover:opacity-[1] relative mt-[20px ] sm:mt-[70px] lg:mt-[0px]">
+                        <img class=" pt-[95px] px-[11px]" src="./assets/home/product-2.png" alt="img">
+                        <div>
+                            <p class="text-[white] text-[14px] mt-[110px] ml-[5px]">Складной нож SQ01-B</p>
+                        </div>
+                        <div class="flex gap-[20px] ml-[5px] text-[14px]">
+                            <p class=" text-[#ADACAC]">850 р.</p>
+                            <p class="text-[red]">Новинка</p>
+                        </div>
+                        <div>
+                            <a href="./pages/catalog.html">
+                                <svg class="w-[1px]h-[37px] bg-[red] rounded-tl-[10px] rounded-bl-[10px] border-2 border-[red] opacity-[] absolute top-5 right-14"
+                                    xmlns="http://www.w3.org/2000/svg" height="27px" viewBox="0 -960 960 960"
+                                    width="27px" fill="#ffff">
+                                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z" />
+                                </svg>
+                            </a>
+                            <a href="./pages/basket.html">
+                                <svg class="w-[35px]h-[37px] bg-[red] border-2 rounded-br-[10px] rounded-tr-[10px] border-[red] opacity-[] absolute top-5 right-8"
+                                    xmlns="http://www.w3.org/2000/svg" height="27px" viewBox="0 -960 960 960"
+                                    width="27px" fill="#ffff">
+                                    <path
+                                        d="M200-80q-33 0-56.5-23.5T120-160v-480q0-33 23.5-56.5T200-720h80q0-83 58.5-141.5T480-920q83 0 141.5 58.5T680-720h80q33 0 56.5 23.5T840-640v480q0 33-23.5 56.5T760-80H200Zm0-80h560v-480H200v480Zm280-240q83 0 141.5-58.5T680-600h-80q0 50-35 85t-85 35q-50 0-85-35t-35-85h-80q0 83 58.5 141.5T480-400ZM360-720h240q0-50-35-85t-85-35q-50 0-85 35t-35 85ZM200-160v-480 480Z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div
+                        class="max-w-[286px] h-[422px] bg-[#272727] rounded-[20px] relative mt-[70px] sm:mt-[70px] lg:mt-[0px]">
+                        <img class="pt-[95px] px-[11px]" src="./assets/home/product-3.png" alt="img">
+                        <div>
+                            <p class="text-[white] text-[14px] mt-[165px] ml-[5px]">Складной нож SQ01-B</p>
+                        </div>
+                        <div class="flex gap-[20px] ml-[5px] text-[14px]">
+                            <p class="text-[#ADACAC]">12 850 р.</p>
+                        </div>
+                        <div>
+                            <a href="./pages/catalog.html">
+                                <svg class="w-[1px]h-[37px] bg-[red] rounded-tl-[10px] rounded-bl-[10px] border-2 border-[red] opacity-[] absolute top-5 right-14"
+                                    xmlns="http://www.w3.org/2000/svg" height="27px" viewBox="0 -960 960 960"
+                                    width="27px" fill="#ffff">
+                                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z" />
+                                </svg>
+                            </a>
+                            <a href="./pages/basket.html">
+                                <svg class="w-[35px]h-[37px] bg-[red] border-2 rounded-br-[10px] rounded-tr-[10px] border-[red] opacity-[] absolute top-5 right-8"
+                                    xmlns="http://www.w3.org/2000/svg" height="27px" viewBox="0 -960 960 960"
+                                    width="27px" fill="#ffff">
+                                    <path
+                                        d="M200-80q-33 0-56.5-23.5T120-160v-480q0-33 23.5-56.5T200-720h80q0-83 58.5-141.5T480-920q83 0 141.5 58.5T680-720h80q33 0 56.5 23.5T840-640v480q0 33-23.5 56.5T760-80H200Zm0-80h560v-480H200v480Zm280-240q83 0 141.5-58.5T680-600h-80q0 50-35 85t-85 35q-50 0-85-35t-35-85h-80q0 83 58.5 141.5T480-400ZM360-720h240q0-50-35-85t-85-35q-50 0-85 35t-35 85ZM200-160v-480 480Z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="max-w-[286px] h-[422px]  rounded-[20px] relative mt-[70px] sm:mt-[70px] lg:mt-[0px]">
+                        <img class="w-full h-full" src="./assets/home/product-4.png" alt="img">
+                        <a class="flex gap-[18px] absolute top-10 right-14 " href="https://www.instagram.com/">
+                            <img src="./assets/home/white-instagram.png" alt="instagram">
+                            <p class="text-[17px] text-[white]">INSTAGRAM</p>
+                        </a>
+                    </div>
+
+                    <div
+                        class="max-w-[286px] h-[422px] bg-[#272727] rounded-[20px] relative mt-[70px] sm:mt-[70px] lg:mt-[0px]">
+                        <img class="pt-[95px] px-[11px]" src="./assets/home/product-3.png" alt="img">
+                        <div>
+                            <p class="text-[white] text-[14px] mt-[165px] ml-[5px]">Складной нож SQ01-B</p>
+                        </div>
+                        <div class="flex gap-[20px] ml-[5px] text-[14px]">
+                            <p class="text-[#ADACAC]">12 850 р.</p>
+                        </div>
+                        <div>
+                            <a href="./pages/catalog.html">
+                                <svg class="w-[1px]h-[37px] bg-[red] rounded-tl-[10px] rounded-bl-[10px] border-2 border-[red] opacity-[] absolute top-5 right-14"
+                                    xmlns="http://www.w3.org/2000/svg" height="27px" viewBox="0 -960 960 960"
+                                    width="27px" fill="#ffff">
+                                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z" />
+                                </svg>
+                            </a>
+                            <a href="./pages/basket.html">
+                                <svg class="w-[35px]h-[37px] bg-[red] border-2 rounded-br-[10px] rounded-tr-[10px] border-[red] opacity-[] absolute top-5 right-8"
+                                    xmlns="http://www.w3.org/2000/svg" height="27px" viewBox="0 -960 960 960"
+                                    width="27px" fill="#ffff">
+                                    <path
+                                        d="M200-80q-33 0-56.5-23.5T120-160v-480q0-33 23.5-56.5T200-720h80q0-83 58.5-141.5T480-920q83 0 141.5 58.5T680-720h80q33 0 56.5 23.5T840-640v480q0 33-23.5 56.5T760-80H200Zm0-80h560v-480H200v480Zm280-240q83 0 141.5-58.5T680-600h-80q0 50-35 85t-85 35q-50 0-85-35t-35-85h-80q0 83 58.5 141.5T480-400ZM360-720h240q0-50-35-85t-85-35q-50 0-85 35t-35 85ZM200-160v-480 480Z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="product" class="mt-[100px]">
+            <div class="container mx-auto px-[20px]">
+                <h1 class="text-[white] text-[18px] whitespace-nowrap sm:text-[27px] flex items-center justify-center">
+                    Узнавайте первым о новинках и
+                    новостях</h1>
+                <form class="flex items-center justify-center mt-[17px]">
+                    <input
+                        class="max-w-[276px]  h-[39px] outline-none text-[#ADACAC] rounded-[6px] pl-[20px] bg-[#272727]"
+                        placeholder="Ваш e-mail" type="email">
+                </form>
+            </div>
+        </section>
+
+        <section id="product" class="mt-[60px]">
+            <div class="container mx-auto px-[20px]">
+                <div
+                    class="flex items-start justify-center sm:justify-between gap-[20px] flex-wrap mt-[25px] mt-[90px] sm:mt-[25px]">
+                    <div
+                        class="max-w-[286px] h-[422px] bg-[#272727] rounded-[20px] hover:opacity-[1] relative mt-[20px ] sm:mt-[0px]">
+                        <img class=" pt-[95px] px-[11px]" src="./assets/home/product-2.png" alt="img">
+                        <div>
+                            <p class="text-[white] text-[14px] mt-[110px] ml-[5px]">Складной нож SQ01-B</p>
+                        </div>
+                        <div class="flex gap-[20px] ml-[5px] text-[14px]">
+                            <p class=" text-[#ADACAC]">850 р.</p>
+                            <p class="text-[red]">Новинка</p>
+                        </div>
+                        <div>
+                            <a href="./pages/catalog.html">
+                                <svg class="w-[1px]h-[37px] bg-[red] rounded-tl-[10px] rounded-bl-[10px] border-2 border-[red] opacity-[] absolute top-5 right-14"
+                                    xmlns="http://www.w3.org/2000/svg" height="27px" viewBox="0 -960 960 960"
+                                    width="27px" fill="#ffff">
+                                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z" />
+                                </svg>
+                            </a>
+                            <a href="./pages/basket.html">
+                                <svg class="w-[35px]h-[37px] bg-[red] border-2 rounded-br-[10px] rounded-tr-[10px] border-[red] opacity-[] absolute top-5 right-8"
+                                    xmlns="http://www.w3.org/2000/svg" height="27px" viewBox="0 -960 960 960"
+                                    width="27px" fill="#ffff">
+                                    <path
+                                        d="M200-80q-33 0-56.5-23.5T120-160v-480q0-33 23.5-56.5T200-720h80q0-83 58.5-141.5T480-920q83 0 141.5 58.5T680-720h80q33 0 56.5 23.5T840-640v480q0 33-23.5 56.5T760-80H200Zm0-80h560v-480H200v480Zm280-240q83 0 141.5-58.5T680-600h-80q0 50-35 85t-85 35q-50 0-85-35t-35-85h-80q0 83 58.5 141.5T480-400ZM360-720h240q0-50-35-85t-85-35q-50 0-85 35t-35 85ZM200-160v-480 480Z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="max-w-[286px] h-[422px] bg-[#272727] rounded-[20px] relative mt-[70px] sm:mt-[0px]">
+                        <img class="pt-[95px] px-[11px]" src="./assets/home/product-3.png" alt="img">
+                        <div>
+                            <p class="text-[white] text-[14px] mt-[165px] ml-[5px]">Складной нож SQ01-B</p>
+                        </div>
+                        <div class="flex gap-[20px] ml-[5px] text-[14px]">
+                            <p class="text-[#ADACAC]">12 850 р.</p>
+                        </div>
+                        <div>
+                            <a href="./pages/catalog.html">
+                                <svg class="w-[1px]h-[37px] bg-[red] rounded-tl-[10px] rounded-bl-[10px] border-2 border-[red] opacity-[] absolute top-5 right-14"
+                                    xmlns="http://www.w3.org/2000/svg" height="27px" viewBox="0 -960 960 960"
+                                    width="27px" fill="#ffff">
+                                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z" />
+                                </svg>
+                            </a>
+                            <a href="./pages/basket.html">
+                                <svg class="w-[35px]h-[37px] bg-[red] border-2 rounded-br-[10px] rounded-tr-[10px] border-[red] opacity-[] absolute top-5 right-8"
+                                    xmlns="http://www.w3.org/2000/svg" height="27px" viewBox="0 -960 960 960"
+                                    width="27px" fill="#ffff">
+                                    <path
+                                        d="M200-80q-33 0-56.5-23.5T120-160v-480q0-33 23.5-56.5T200-720h80q0-83 58.5-141.5T480-920q83 0 141.5 58.5T680-720h80q33 0 56.5 23.5T840-640v480q0 33-23.5 56.5T760-80H200Zm0-80h560v-480H200v480Zm280-240q83 0 141.5-58.5T680-600h-80q0 50-35 85t-85 35q-50 0-85-35t-35-85h-80q0 83 58.5 141.5T480-400ZM360-720h240q0-50-35-85t-85-35q-50 0-85 35t-35 85ZM200-160v-480 480Z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div
+                        class="max-w-[286px] h-[422px] bg-[#272727] rounded-[20px] hover:opacity-[] relative mt-[70px] sm:mt-[70px] lg:mt-[0px]">
+                        <img class=" pt-[95px] px-[11px]" src="./assets/home/product-2.png" alt="img">
+                        <div>
+                            <p class="text-[white] text-[14px] mt-[110px] ml-[5px]">Складной нож SQ01-B</p>
+                        </div>
+                        <div class="flex gap-[20px] ml-[5px] text-[14px]">
+                            <p class=" text-[#ADACAC]">850 р.</p>
+                            <p class="text-[red]">Новинка</p>
+                        </div>
+                        <div>
+                            <a href="./pages/catalog.html">
+                                <svg class="w-[1px]h-[37px] bg-[red] rounded-tl-[10px] rounded-bl-[10px] border-2 border-[red] opacity-[] absolute top-5 right-14"
+                                    xmlns="http://www.w3.org/2000/svg" height="27px" viewBox="0 -960 960 960"
+                                    width="27px" fill="#ffff">
+                                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z" />
+                                </svg>
+                            </a>
+                            <a href="./pages/basket.html">
+                                <svg class="w-[35px]h-[37px] bg-[red] border-2 rounded-br-[10px] rounded-tr-[10px] border-[red] opacity-[] absolute top-5 right-8"
+                                    xmlns="http://www.w3.org/2000/svg" height="27px" viewBox="0 -960 960 960"
+                                    width="27px" fill="#ffff">
+                                    <path
+                                        d="M200-80q-33 0-56.5-23.5T120-160v-480q0-33 23.5-56.5T200-720h80q0-83 58.5-141.5T480-920q83 0 141.5 58.5T680-720h80q33 0 56.5 23.5T840-640v480q0 33-23.5 56.5T760-80H200Zm0-80h560v-480H200v480Zm280-240q83 0 141.5-58.5T680-600h-80q0 50-35 85t-85 35q-50 0-85-35t-35-85h-80q0 83 58.5 141.5T480-400ZM360-720h240q0-50-35-85t-85-35q-50 0-85 35t-35 85ZM200-160v-480 480Z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div
+                        class="max-w-[286px] h-[422px] bg-[#272727] rounded-[20px] relative mt-[70px] sm:mt-[70px] lg:mt-[0px]">
+                        <img class="pt-[95px] px-[11px]" src="./assets/home/product-3.png" alt="img">
+                        <div>
+                            <p class="text-[white] text-[14px] mt-[165px] ml-[5px]">Складной нож SQ01-B</p>
+                        </div>
+                        <div class="flex gap-[20px] ml-[5px] text-[14px]">
+                            <p class="text-[#ADACAC]">12 850 р.</p>
+                        </div>
+                        <div>
+                            <a href="./pages/catalog.html">
+                                <svg class="w-[1px]h-[37px] bg-[red] rounded-tl-[10px] rounded-bl-[10px] border-2 border-[red] opacity-[] absolute top-5 right-14"
+                                    xmlns="http://www.w3.org/2000/svg" height="27px" viewBox="0 -960 960 960"
+                                    width="27px" fill="#ffff">
+                                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z" />
+                                </svg>
+                            </a>
+                            <a href="./pages/basket.html">
+                                <svg class="w-[35px]h-[37px] bg-[red] border-2 rounded-br-[10px] rounded-tr-[10px] border-[red] opacity-[] absolute top-5 right-8"
+                                    xmlns="http://www.w3.org/2000/svg" height="27px" viewBox="0 -960 960 960"
+                                    width="27px" fill="#ffff">
+                                    <path
+                                        d="M200-80q-33 0-56.5-23.5T120-160v-480q0-33 23.5-56.5T200-720h80q0-83 58.5-141.5T480-920q83 0 141.5 58.5T680-720h80q33 0 56.5 23.5T840-640v480q0 33-23.5 56.5T760-80H200Zm0-80h560v-480H200v480Zm280-240q83 0 141.5-58.5T680-600h-80q0 50-35 85t-85 35q-50 0-85-35t-35-85h-80q0 83 58.5 141.5T480-400ZM360-720h240q0-50-35-85t-85-35q-50 0-85 35t-35 85ZM200-160v-480 480Z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="product" class="mt-[120px]">
+            <div class="container mx-auto px-[20px]">
+                <div class="flex itmes-center justify-center gap-[53px] text-[white]">
+                    <h1 class="border-b-2 border-[red]">НОВИНКИ</h1>
+                    <h1>ПОПУЛЯРНОЕ</h1>
+                </div>
+            </div>
+        </section>
+
+        <section id="product" class="mt-[30px]">
+            <div class="container mx-auto px-[20px]">
+                  <div
+                    class="flex items-start justify-center sm:justify-between gap-[20px] flex-wrap mt-[90px] sm:mt-[25px]">
+                    <div
+                        class="max-w-[286px] h-[422px] bg-[#272727] rounded-[20px] hover:opacity-[1] relative mt-[20px ] sm:mt-[0px]">
+                        <img class=" pt-[95px] px-[11px]" src="./assets/home/product-2.png" alt="img">
+                        <div>
+                            <p class="text-[white] text-[14px] mt-[110px] ml-[5px]">Складной нож SQ01-B</p>
+                        </div>
+                        <div class="flex gap-[20px] ml-[5px] text-[14px]">
+                            <p class=" text-[#ADACAC]">850 р.</p>
+                            <p class="text-[red]">Новинка</p>
+                        </div>
+                        <div>
+                            <a href="./pages/catalog.html">
+                                <svg class="w-[1px]h-[37px] bg-[red] rounded-tl-[10px] rounded-bl-[10px] border-2 border-[red] opacity-[] absolute top-5 right-14"
+                                    xmlns="http://www.w3.org/2000/svg" height="27px" viewBox="0 -960 960 960"
+                                    width="27px" fill="#ffff">
+                                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z" />
+                                </svg>
+                            </a>
+                            <a href="./pages/basket.html">
+                                <svg class="w-[35px]h-[37px] bg-[red] border-2 rounded-br-[10px] rounded-tr-[10px] border-[red] opacity-[] absolute top-5 right-8"
+                                    xmlns="http://www.w3.org/2000/svg" height="27px" viewBox="0 -960 960 960"
+                                    width="27px" fill="#ffff">
+                                    <path
+                                        d="M200-80q-33 0-56.5-23.5T120-160v-480q0-33 23.5-56.5T200-720h80q0-83 58.5-141.5T480-920q83 0 141.5 58.5T680-720h80q33 0 56.5 23.5T840-640v480q0 33-23.5 56.5T760-80H200Zm0-80h560v-480H200v480Zm280-240q83 0 141.5-58.5T680-600h-80q0 50-35 85t-85 35q-50 0-85-35t-35-85h-80q0 83 58.5 141.5T480-400ZM360-720h240q0-50-35-85t-85-35q-50 0-85 35t-35 85ZM200-160v-480 480Z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="max-w-[286px] h-[422px] bg-[#272727] rounded-[20px] relative mt-[70px] sm:mt-[0px]">
+                        <img class="pt-[95px] px-[11px]" src="./assets/home/product-3.png" alt="img">
+                        <div>
+                            <p class="text-[white] text-[14px] mt-[165px] ml-[5px]">Складной нож SQ01-B</p>
+                        </div>
+                        <div class="flex gap-[20px] ml-[5px] text-[14px]">
+                            <p class="text-[#ADACAC]">12 850 р.</p>
+                        </div>
+                        <div>
+                            <a href="./pages/catalog.html">
+                                <svg class="w-[1px]h-[37px] bg-[red] rounded-tl-[10px] rounded-bl-[10px] border-2 border-[red] opacity-[] absolute top-5 right-14"
+                                    xmlns="http://www.w3.org/2000/svg" height="27px" viewBox="0 -960 960 960"
+                                    width="27px" fill="#ffff">
+                                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z" />
+                                </svg>
+                            </a>
+                            <a href="./pages/basket.html">
+                                <svg class="w-[35px]h-[37px] bg-[red] border-2 rounded-br-[10px] rounded-tr-[10px] border-[red] opacity-[] absolute top-5 right-8"
+                                    xmlns="http://www.w3.org/2000/svg" height="27px" viewBox="0 -960 960 960"
+                                    width="27px" fill="#ffff">
+                                    <path
+                                        d="M200-80q-33 0-56.5-23.5T120-160v-480q0-33 23.5-56.5T200-720h80q0-83 58.5-141.5T480-920q83 0 141.5 58.5T680-720h80q33 0 56.5 23.5T840-640v480q0 33-23.5 56.5T760-80H200Zm0-80h560v-480H200v480Zm280-240q83 0 141.5-58.5T680-600h-80q0 50-35 85t-85 35q-50 0-85-35t-35-85h-80q0 83 58.5 141.5T480-400ZM360-720h240q0-50-35-85t-85-35q-50 0-85 35t-35 85ZM200-160v-480 480Z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div
+                        class="max-w-[286px] h-[422px] bg-[#272727] rounded-[20px] hover:opacity-[] relative mt-[70px] sm:mt-[70px] lg:mt-[0px]">
+                        <img class=" pt-[95px] px-[11px]" src="./assets/home/product-2.png" alt="img">
+                        <div>
+                            <p class="text-[white] text-[14px] mt-[110px] ml-[5px]">Складной нож SQ01-B</p>
+                        </div>
+                        <div class="flex gap-[20px] ml-[5px] text-[14px]">
+                            <p class=" text-[#ADACAC]">850 р.</p>
+                            <p class="text-[red]">Новинка</p>
+                        </div>
+                        <div>
+                            <a href="./pages/catalog.html">
+                                <svg class="w-[1px]h-[37px] bg-[red] rounded-tl-[10px] rounded-bl-[10px] border-2 border-[red] opacity-[] absolute top-5 right-14"
+                                    xmlns="http://www.w3.org/2000/svg" height="27px" viewBox="0 -960 960 960"
+                                    width="27px" fill="#ffff">
+                                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z" />
+                                </svg>
+                            </a>
+                            <a href="./pages/basket.html">
+                                <svg class="w-[35px]h-[37px] bg-[red] border-2 rounded-br-[10px] rounded-tr-[10px] border-[red] opacity-[] absolute top-5 right-8"
+                                    xmlns="http://www.w3.org/2000/svg" height="27px" viewBox="0 -960 960 960"
+                                    width="27px" fill="#ffff">
+                                    <path
+                                        d="M200-80q-33 0-56.5-23.5T120-160v-480q0-33 23.5-56.5T200-720h80q0-83 58.5-141.5T480-920q83 0 141.5 58.5T680-720h80q33 0 56.5 23.5T840-640v480q0 33-23.5 56.5T760-80H200Zm0-80h560v-480H200v480Zm280-240q83 0 141.5-58.5T680-600h-80q0 50-35 85t-85 35q-50 0-85-35t-35-85h-80q0 83 58.5 141.5T480-400ZM360-720h240q0-50-35-85t-85-35q-50 0-85 35t-35 85ZM200-160v-480 480Z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div
+                        class="max-w-[286px] h-[422px] bg-[#272727] rounded-[20px] relative mt-[70px] sm:mt-[70px] lg:mt-[0px]">
+                        <img class="pt-[95px] px-[11px]" src="./assets/home/product-3.png" alt="img">
+                        <div>
+                            <p class="text-[white] text-[14px] mt-[165px] ml-[5px]">Складной нож SQ01-B</p>
+                        </div>
+                        <div class="flex gap-[20px] ml-[5px] text-[14px]">
+                            <p class="text-[#ADACAC]">12 850 р.</p>
+                        </div>
+                        <div>
+                            <a href="./pages/catalog.html">
+                                <svg class="w-[1px]h-[37px] bg-[red] rounded-tl-[10px] rounded-bl-[10px] border-2 border-[red] opacity-[] absolute top-5 right-14"
+                                    xmlns="http://www.w3.org/2000/svg" height="27px" viewBox="0 -960 960 960"
+                                    width="27px" fill="#ffff">
+                                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z" />
+                                </svg>
+                            </a>
+                            <a href="./pages/basket.html">
+                                <svg class="w-[35px]h-[37px] bg-[red] border-2 rounded-br-[10px] rounded-tr-[10px] border-[red] opacity-[] absolute top-5 right-8"
+                                    xmlns="http://www.w3.org/2000/svg" height="27px" viewBox="0 -960 960 960"
+                                    width="27px" fill="#ffff">
+                                    <path
+                                        d="M200-80q-33 0-56.5-23.5T120-160v-480q0-33 23.5-56.5T200-720h80q0-83 58.5-141.5T480-920q83 0 141.5 58.5T680-720h80q33 0 56.5 23.5T840-640v480q0 33-23.5 56.5T760-80H200Zm0-80h560v-480H200v480Zm280-240q83 0 141.5-58.5T680-600h-80q0 50-35 85t-85 35q-50 0-85-35t-35-85h-80q0 83 58.5 141.5T480-400ZM360-720h240q0-50-35-85t-85-35q-50 0-85 35t-35 85ZM200-160v-480 480Z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </section>
+
+
     </main>
+
     <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+
+
     <footer class="bg-[#272727] xl:h-[386px] pt-[44px]">
         <div class="container mx-auto px-[20px]">
             <div class="flex justify-center  xl:flex justify-between  flex-wrap">
@@ -138,10 +719,18 @@
                             <h3>Мы в соцсетях</h3>
                         </div>
                         <div class="flex gap-[10px]">
-                            <img src="../../assets/home/facebook (2).png" alt="fecebook">
-                            <img src="../../assets/home/vk.png" alt="vk">
-                            <img src="../../assets/home/instagramm.png" alt="instagram">
-                            <img src="../../assets/home/youtube.png" alt="youtube">
+                            <a href="https://www.facebook.com/index.php/">
+                                <img src="../../assets/home/facebook (2).png" alt="fecebook">
+                            </a>
+                            <a href="https://vk.com/">
+                                <img src="../../assets/home/vk.png" alt="vk">
+                            </a>
+                            <a href="https://www.instagram.com/">
+                                <img src="../../assets/home/instagramm.png" alt="instagram">
+                            </a>
+                            <a href="https://www.youtube.com/">
+                                <img src="../../assets/home/youtube.png" alt="youtube">
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -172,6 +761,14 @@
             </div>
         </div>
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+        integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./Js/home.js"></script>
 </body>
 
 </html>
