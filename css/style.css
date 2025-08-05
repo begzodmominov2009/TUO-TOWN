@@ -1,3 +1,118 @@
-.overflow-y-scroll{
-    scrollbar-color: transparent;
+
+.menus {
+    transform: translateX(-0px) !important;
+    /* opacity: 0; */
+
+}
+.owl-nav{
+    align-items: center;
+
+}
+.owl-prev span {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    font-size: 30px;
+    display: inline-block;
+    background-color: transparent;
+    top: 515px;
+    color: white;
+    margin-left: 160px;
+    border: 2px solid gray;
+    left: 0;
+    position: absolute;
+
+}
+.owl-prev span:hover{
+    background-color: rgba(255, 0, 0, 0.623);
+    border: none;
+}
+
+.owl-next span {
+    width: 50px;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    height: 50px;
+    border-radius: 25px;
+    font-size: 30px;
+    border: 2px solid gray;
+    display: inline-block;
+    background-color: transparent;
+    color: white;
+    margin-right: 100px;
+    top: 515px;
+}
+.owl-next span:hover{
+    background-color: rgba(255, 0, 0, 0.623);
+    border: none;
+}
+
+@media (max-width:550px) {
+    .owl-nav{
+        align-items: center;
+    }
+    .owl-next span{
+        top: 525px;
+        right: 0;
+        margin-right: 20px;
+    }
+    .owl-prev span{
+        top: 525px;
+        left: 0;
+        margin-left: 20px;
+    }
+}
+@media (max-width:430px) {
+    .owl-next span{
+        top: 525px;
+        right: 0;
+        margin-right: 20px;
+    }
+    .owl-prev span{
+        top: 525px;
+        left: 0;
+        margin-left: 20px;
+    }
+}
+.section_span{
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+.section_span2{
+    color: white;
+    background-color: transparent;
+    display: inline-block;
+    border: 2px solid white;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+.section_span3{
+    color: white;
+    background-color: transparent;
+    display: inline-block;
+    width: 25px;
+    border: 2px solid white;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+.section_head{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
