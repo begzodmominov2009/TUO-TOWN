@@ -47,6 +47,7 @@
     background-color: rgba(255, 0, 0, 0.623);
     border: none;
 }
+<<<<<<< HEAD
 
 @media (max-width:550px) {
     .owl-nav{
@@ -116,3 +117,5 @@
     align-items: center;
     justify-content: center;
 }
+=======
+>>>>>>> 81458ac3552956afea9580eb9663ac689634328b
